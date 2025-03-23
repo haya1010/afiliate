@@ -1,0 +1,44 @@
+## シンプルなリンク設定ガイド
+
+### HTMLファイル内でリンクを設定する方法
+
+このサイトでは、HTMLファイル内でリンクを簡単に設定できるようになっています。
+`index.html`ファイルの先頭部分にある`SITE_LINKS`オブジェクトを編集するだけです。
+
+```javascript
+const SITE_LINKS = {
+    "product1": "https://affiliate.rakuten.co.jp/...", // キャンメイク マシュマロフィニッシュパウダー
+    "product2": "https://affiliate.rakuten.co.jp/...", // HABA 薬用 スクワラン 
+    "product3": "https://affiliate.rakuten.co.jp/...", // エクセル リアルクローズシャドウ
+    "campaign": "https://affiliate.rakuten.co.jp/...", // 特典バナー
+    "instagram": "https://www.instagram.com/...",      // Instagram
+    "tiktok": "https://www.tiktok.com/...",            // TikTok
+    "youtube": "https://www.youtube.com/...",          // YouTube
+    "twitter": "https://twitter.com/..."               // X（Twitter）
+};
+```
+
+### 各リンク項目の説明
+
+- `product1`: キャンメイク マシュマロフィニッシュパウダー のアフィリエイトリンク
+- `product2`: HABA 薬用 スクワラン のアフィリエイトリンク
+- `product3`: エクセル リアルクローズシャドウ のアフィリエイトリンク
+- `campaign`: 特典付きキャンペーンページのリンク
+- `instagram`: あみち。さんのInstagramアカウント
+- `tiktok`: あみち。さんのTikTokアカウント
+- `youtube`: あみち。さんのYouTubeチャンネル
+- `twitter`: あみち。さんのX（Twitter）アカウント
+
+### 使用例
+
+例えば、キャンメイク マシュマロフィニッシュパウダーの楽天アフィリエイトリンクを設定する場合：
+
+```javascript
+"product1": "https://hb.afl.rakuten.co.jp/ichiba/46455df4.8df6d6ff.46455df5.74c30a1c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsoukaikenbi%2Fida-4901008308661-1%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9"
+```
+
+### 注意点
+
+- 各リンクの末尾のカンマを忘れないようにしてください（最後の項目以外）
+- クォーテーションマーク（" "）は削除しないでください
+- リンクを変更した後は、ブラウザのキャッシュをクリアするか、シークレットウィンドウで確認してください

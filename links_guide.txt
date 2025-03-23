@@ -1,0 +1,37 @@
+## リンク設定ガイド
+
+このサイトには3つの方法でリンクを設定できます。優先順位の高い順に：
+
+### 1. HTMLファイル内の埋め込みデータ（推奨・最も確実）
+
+`index.html`ファイルの先頭にある`SITE_LINKS`オブジェクトを編集します：
+
+```javascript
+const SITE_LINKS = {
+    "product1": "https://affiliate.rakuten.co.jp/...", // キャンメイク マシュマロフィニッシュパウダー
+    "product2": "https://affiliate.rakuten.co.jp/...", // HABA 薬用 スクワラン 
+    "product3": "https://affiliate.rakuten.co.jp/...", // エクセル リアルクローズシャドウ
+    "campaign": "https://affiliate.rakuten.co.jp/...", // 特典バナー
+    "instagram": "https://www.instagram.com/...",      // Instagram
+    "tiktok": "https://www.tiktok.com/...",            // TikTok
+    "youtube": "https://www.youtube.com/...",          // YouTube
+    "twitter": "https://twitter.com/..."               // X（Twitter）
+};
+```
+
+これが最も確実な方法で、ローカル環境でもWebサーバー上でも正常に動作します。
+
+### 2. JSONファイルを使用する方法（Webサーバー上のみ）
+
+`links.json`ファイルを編集します。この方法はWebサーバー上にアップロードした場合のみ動作します。ローカルファイルとして直接ブラウザで開いた場合は機能しません。
+
+JSONファイルの形式：
+```json
+{
+    "product1": "https://affiliate.rakuten.co.jp/...",
+    "product2": "https://affiliate.rakuten.co.jp/...",
+    "product3": "https://affiliate.rakuten.co.jp/...",
+    "campaign": "https://affiliate.rakuten.co.jp/...",
+    "instagram": "https://www.instagram.com/...",
+    "tiktok": "https://www.tiktok.com/...",
+    "youtube": "https://www.you
