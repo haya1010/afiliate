@@ -34,4 +34,36 @@ JSONファイルの形式：
     "campaign": "https://affiliate.rakuten.co.jp/...",
     "instagram": "https://www.instagram.com/...",
     "tiktok": "https://www.tiktok.com/...",
-    "youtube": "https://www.you
+    "youtube": "https://www.youtube.com/...",
+    "twitter": "https://twitter.com/..."
+}
+```
+
+### 3. フォールバックリンク（最終手段）
+
+上記の方法が使えない場合、`links.js`内のフォールバックリンクが使用されます。
+
+## 商品リンク項目の説明
+
+- `product1`: キャンメイク マシュマロフィニッシュパウダー
+- `product2`: HABA 薬用 スクワラン 
+- `product3`: エクセル リアルクローズシャドウ CS01 ベージュブラウン
+- `campaign`: 特典付きキャンペーンページ
+- `instagram`: Instagramリンク
+- `tiktok`: TikTokリンク
+- `youtube`: YouTubeリンク
+- `twitter`: X（Twitter）リンク
+
+## リンクの確認方法
+
+ブラウザでサイトを開いた後、開発者ツール（F12キー）のコンソールで以下のコマンドを実行すると、各リンクの状態を確認できます：
+
+```javascript
+window.checkLinkElements();
+```
+
+## 注意点
+
+- HTML内の埋め込みデータ（SITE_LINKS）が最も確実に動作します
+- 大規模なサイトや頻繁に更新が必要な場合は、サイトをWebサーバーにアップロードして`links.json`を使用することをお勧めします
+- リンクを変更した後は、ブラウザのキャッシュをクリアするか、シークレットウィンドウで確認してください
